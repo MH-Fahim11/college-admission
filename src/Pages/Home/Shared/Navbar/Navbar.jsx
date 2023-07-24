@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-[#052c65] p-4">
+      <nav className=" bg-green-800 p-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">

@@ -20,8 +20,8 @@ const Banner = () => {
         <SwiperSlide>
           <div>
             <img
-              src="https://i.ibb.co/ZzLYMg4/banner-img5.jpg"
-              className="w-full "
+              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              className="w-full max-h-screen"
             />
             <div className="absolute flex items-center pt-14 lg:pt-0 pl-8 h-full  bottom-0 bg-gradient-to-r from-[#21223a] to-[rgba(45, 21, 21, 0)]">
               <div className="text-white space-y-2 lg:space-y-7 w-full lg:w-2/3">
@@ -44,8 +44,8 @@ const Banner = () => {
         <SwiperSlide>
           <div>
             <img
-              src="https://i.ibb.co/fG3bKBR/banner-img4.jpg"
-              className="w-full "
+              src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              className="w-full max-h-screen "
             />
             <div className="absolute flex items-center pt-14 lg:pt-0 pl-8 h-full  bottom-0 bg-gradient-to-r from-[#21223a] to-[rgba(45, 21, 21, 0)]">
               <div className="text-white space-y-2 lg:space-y-7 w-full lg:w-2/3">

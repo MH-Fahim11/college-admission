@@ -6,7 +6,7 @@ const CollegeTable = () => {
   const [collegeData, setCollegeData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-colleges")
+    fetch("https://college-admission-server-mh-fahim11.vercel.app/all-colleges")
       .then((res) => res.json())
       .then((data) => {
         setCollegeData(data);

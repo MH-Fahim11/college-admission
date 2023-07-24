@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -5,7 +6,8 @@ import Container from "../../Component/Container";
 
 const Apply = () => {
   const { id, name } = useParams();
-  console.log(id);
+  const [collegeDetailsData, setCollegeDetailsData] = useState({});
+
   const {
     handleSubmit,
     control,
@@ -13,9 +15,15 @@ const Apply = () => {
     formState: { errors },
   } = useForm();
 
+  useEffect(() => {
+    fetch(`https://college-admission-server-mh-fahim11.vercel.app/college/${id}`)
+      .then((res) => res.json())
+      .then((data) => setCollegeDetailsData(data));
+  }, []);
+
   const onSubmit = (data) => {
-    const newData = { ...data, collegeId: id };
-    fetch("http://localhost:5000/apply", {
+    const newData = { ...data, ...collegeDetailsData, collegeId: id };
+    fetch("https://college-admission-server-mh-fahim11.vercel.app/apply", {
       method: "POST",
       headers: {
         "content-type": "application/json",

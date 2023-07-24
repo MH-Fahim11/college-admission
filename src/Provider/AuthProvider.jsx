@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [observer, setObserverState] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [collegeData, setCollegeData] = useState([]);
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -64,6 +65,13 @@ const AuthProvider = ({ children }) => {
     };
   }, [observer]);
 
+  // single college search
+  const collegeSearch = (text) => {
+    fetch(`https://college-admission-server-mh-fahim11.vercel.app/single-college/${text}`)
+      .then((res) => res.json())
+      .then((data) => setCollegeData(data));
+  };
+
   const authInfo = {
     singUpWithEmail,
     profileUpdate,
@@ -74,6 +82,8 @@ const AuthProvider = ({ children }) => {
     setObserverState,
     signInWithEmail,
     loading,
+    collegeSearch,
+    collegeData,
   };
 
   return (

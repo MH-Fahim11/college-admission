@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-[#052c65] text-primary-content">
+      <footer className="footer footer-center p-10 bg-green-800 text-primary-content">
         <div>
           <FaGraduationCap className="text-6xl font-bold text-white" />
           <p className="font-bold text-3xl text-white">
